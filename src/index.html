@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cifrado Cesar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    </header>
+    <section>
+    <div>
+        <h1>Save Her</h1>
     </div>
+    </section>
+    <div id="box">
+        <input type="text" id="message" placeholder="Ingresa texto a cifrar">
+        <input type="number" id="sos" placeholder="Ingresa nro sos">
+        <br>
+        <button id="encrypt">Cifrar</button>
+        <button id="decrypt">Descifrar</button>
+        <br>
+        <input type="text" id="solution" placeholder="Tu texto cifrado">
+    </div>
+    <section>
+
+    </section>
+    <footer></footer>
+
+    <div id="root"></div>
+
+    <button onclick="location.href = 'index2.html'" id="enviarprimera">Volver a inicio</button> 
     <script src="cipher.js"></script>
     <script src="index.js"></script>
-  </body>
+</body>
 </html>
