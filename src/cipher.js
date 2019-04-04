@@ -14,7 +14,7 @@ window.cipher = {
       }
 
       else if(asciiNumber === 32){//if para espacios
-        /*cipheroffset=" ";*/
+        //cipheroffset=" ";
        cipheroffset=(asciiNumber - 32 + parseInt(offset)) % 1 + 32; 
       }
 
@@ -22,23 +22,32 @@ window.cipher = {
        cipheroffset=(asciiNumber - 48 + parseInt(offset)) % 10 + 48;
       }
       /*else if(asciiNumber === 164){//if para ñ
-       cipheroffset="ñ"; 
-      }*/
-      result += String.fromCharCode(cipheroffset);//tomo cod ascii del texto cifrado y lo paso a string, asi el resultado lo entrega en string
+       cipheroffset="ñ"; */
+       result += String.fromCharCode(cipheroffset);//tomo cod ascii del texto cifrado y lo paso a string, asi el resultado lo entrega en string
 
+      }
+      return result;
+
+    },
+
+  decode: (offset,texto) => {
+    let result="";
+
+    for(let i=0; i<texto.length; i++){
+      let asciiNumber = texto.charCodeAt(i);
+
+      if(asciiNumber >=65 && asciiNumber <=90){
+      cipheroffset=(asciiNumber + 65 - parseInt(offset)) % 26 + 65;  
     } 
 
-    return result;
-  }
-  
-  /*decode: (offset,texto) => {
-    let result="";
-    for(let i=0; i<texto.length; i++){
+    /* if(asciiNumber >=97 && asciiNumber <=122){
+      cipheroffset=(asciiNumber + 97 - parseInt(offset)) % 26 + 97;
 
-      if(texto.charCodeAt(i) >= 65 && texto.charCodeAt(i) <=90);
+    } */
 
-
-    
-} */
+result += String.fromCharCode(cipheroffset);
 }
-
+return result;    
+} 
+  
+};

@@ -4,10 +4,10 @@ describe('cipher', () => {
     assert.equal(typeof cipher, 'object');
   });
 
-  describe('cipher.encode', () => {
+  describe('cipher.encode', () => { //a quien voy a testear//
 
-    it('debería ser una función', () => {
-      assert.equal(typeof cipher.encode, 'function');
+    it('debería ser una función', () => { //que voy a testear o probar//
+      assert.equal(typeof cipher.encode, 'function'); //assert: es quien se encarga de evaluar que el test haga lo que tiene que hacer, metodos son una funcion, ejem deepequal, esa funcion la entrega chai, en chai se ven ejemplos//
     });
 
     it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33');
