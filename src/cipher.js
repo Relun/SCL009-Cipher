@@ -10,7 +10,7 @@ window.cipher = {
       }
 
       else if(asciiNumber >=97 && asciiNumber <=122){// if para minusculas
-       cipheroffset=(asciiNumber - 97 + parseInt(offset)) % 26 + 97;//parseint: toma una cadena de texto(string) y retorna su valor en numero entero
+       cipheroffset=(asciiNumber - 97 + parseInt(offset)) % 62 + 97;//parseint: toma una cadena de texto(string) y retorna su valor en numero entero
       }
 
       else if(asciiNumber === 32){//if para espacios
@@ -36,14 +36,21 @@ window.cipher = {
     for(let i=0; i<texto.length; i++){
       let asciiNumber = texto.charCodeAt(i);
 
-      if(asciiNumber >=65 && asciiNumber <=90){
+      if(asciiNumber >=65 && asciiNumber <=90){//mayusculas
       cipheroffset=(asciiNumber + 65 - parseInt(offset)) % 26 + 65;  
     } 
+     else if(asciiNumber >=97 && asciiNumber <=122){//minusculas
+      cipheroffset=(asciiNumber - 97 - parseInt(offset)) % 26 + 97;
+    } 
+    else if(asciiNumber === 32){//if para espacios
+      //cipheroffset=" ";
+     cipheroffset=(asciiNumber - 32 - parseInt(offset)) % 1 + 32; 
+    }
 
-    /* if(asciiNumber >=97 && asciiNumber <=122){
-      cipheroffset=(asciiNumber + 97 - parseInt(offset)) % 26 + 97;
+    else if(asciiNumber >=48 && asciiNumber <=57){// if para numeros
+      cipheroffset=(asciiNumber - 48 - parseInt(offset)) % 10 + 48;
+     }
 
-    } */
 
 result += String.fromCharCode(cipheroffset);
 }
