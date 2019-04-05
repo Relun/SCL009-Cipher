@@ -1,7 +1,8 @@
 window.cipher = {
   encode: (offset, texto) => {
     let result=""; //variable con string vacío para guardar mi resultado
-    
+    let cipheroffset="";
+
     for(let i=0; i<texto.length; i++){ //for sirve para recorrer las letras del texto que ingresa el usuario
       let asciiNumber = texto.charCodeAt(i); //variable toma la letra y la pasa a cod ascii
 
@@ -32,7 +33,8 @@ window.cipher = {
 
   decode: (offset,texto) => {
     let result="";
-
+    let cipheroffset="";
+    
     for(let i=0; i<texto.length; i++){
       let asciiNumber = texto.charCodeAt(i);
 
