@@ -39,18 +39,21 @@ window.cipher = {
       let asciiNumber = texto.charCodeAt(i);
 
       if(asciiNumber >=65 && asciiNumber <=90){//mayusculas
-      cipheroffset=(asciiNumber + 65 - parseInt(offset)) % 26 + 65;  
+      cipheroffset=((asciiNumber-90-parseInt(offset)) % 26 + 90);  
     } 
-     else if(asciiNumber >=97 && asciiNumber <=122){//minusculas
-      cipheroffset=(asciiNumber - 97 - parseInt(offset)) % 26 + 97;
-    } 
+    else if(asciiNumber >=97 && asciiNumber <=122){
+      cipheroffset=((asciiNumber-122-parseInt(offset))%26+122);
+    }
+     /*else if(asciiNumber >=97 && asciiNumber <=122){//minusculas
+      cipheroffset=(asciiNumber + 97 - parseInt(offset)) % 26 + 97;
+    } */
     else if(asciiNumber === 32){//if para espacios
       //cipheroffset=" ";
-     cipheroffset=(asciiNumber - 32 - parseInt(offset)) % 1 + 32; 
+     cipheroffset=((asciiNumber - 32 - parseInt(offset)) % 1 + 32); 
     }
 
     else if(asciiNumber >=48 && asciiNumber <=57){// if para numeros
-      cipheroffset=(asciiNumber - 48 - parseInt(offset)) % 10 + 48;
+      cipheroffset=((asciiNumber - 57 - parseInt(offset)) % 10 + 57);
      }
 
 

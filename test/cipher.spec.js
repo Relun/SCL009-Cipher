@@ -15,7 +15,11 @@ describe('cipher', () => {
     });
 
     it('debería retornar "hijklmnopqrstuvwxyzabcdefg" para "abcdefghijklmnopqrstuvwxyz" con offset 33', () => {
-      assert(cipher.encode(33,"abcdefghijklmnopqrstuvwxyz"),"hijklmnopqrstuvwxyzabcdefg");
+      assert.equal(cipher.encode(33,"abcdefghijklmnopqrstuvwxyz"),"hijklmnopqrstuvwxyzabcdefg");
+    });
+
+    it('debería retornar "9012345678" para "1234567890" con offset 18', () => {
+      assert.equal(cipher.encode(18,"1234567890"),"9012345678");
     });
   });
 
@@ -30,7 +34,11 @@ describe('cipher', () => {
     });
 
     it('debería retornar "abcdefghijklmnopqrstuvwxyz" para  "hijklmnopqrstuvwxyzabcdefg" con offset 33', () => {
-      assert(cipher.decode(33, "hijklmnopqrstuvwxyzabcdefg" ),"abcdefghijklmnopqrstuvwxyz");
+      assert.equal(cipher.decode(33, "hijklmnopqrstuvwxyzabcdefg" ),"abcdefghijklmnopqrstuvwxyz");
+    });
+
+    it('debería retornar "1234567890" para "9012345678" con offset 18', () => {
+      assert.equal(cipher.decode(18,"9012345678"),"1234567890");
     });
   });
 
