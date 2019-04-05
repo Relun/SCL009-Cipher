@@ -11,7 +11,7 @@ window.cipher = {
       }
 
       else if(asciiNumber >=97 && asciiNumber <=122){// if para minusculas
-       cipheroffset=(asciiNumber - 97 + parseInt(offset)) % 62 + 97;//parseint: toma una cadena de texto(string) y retorna su valor en numero entero
+       cipheroffset=(asciiNumber - 97 + parseInt(offset)) % 26 + 97;//parseint: toma una cadena de texto(string) y retorna su valor en numero entero
       }
 
       else if(asciiNumber === 32){//if para espacios
@@ -34,7 +34,7 @@ window.cipher = {
   decode: (offset,texto) => {
     let result="";
     let cipheroffset="";
-    
+
     for(let i=0; i<texto.length; i++){
       let asciiNumber = texto.charCodeAt(i);
 
