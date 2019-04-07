@@ -21,6 +21,14 @@ describe('cipher', () => {
     it('debería retornar "9012345678" para "1234567890" con offset 18', () => {
       assert.equal(cipher.encode(18,"1234567890"),"9012345678");
     });
+
+    it('debería retornar "=>?@: ;< Mvke" para ":;<=> ?@ Clau" con offset 10', () => {
+      assert.equal(cipher.encode(10,":;<=> ?@ Clau"),"=>?@: ;< Mvke");
+    });
+
+    it('debería retornar "!#$% Ahet &lhl +,-./" para "!#$% Hola &sos +,-./" con offset 45', () => {
+      assert.equal(cipher.encode(45,"!#$% Hola &sos +,-./"),"!#$% Ahet &lhl +,-./");
+    });
   });
 
   describe('cipher.decode', () => {
@@ -40,6 +48,16 @@ describe('cipher', () => {
     it('debería retornar "1234567890" para "9012345678" con offset 18', () => {
       assert.equal(cipher.decode(18,"9012345678"),"1234567890");
     });
+
+    it('debería retornar ":;<=> ?@ Clau" para "=>?@: ;< Mvke" con offset 10', () => {
+      assert.equal(cipher.decode(10,"=>?@: ;< Mvke"),":;<=> ?@ Clau");
+    });
+
+    it('debería retornar "!#$% Hola &sos +,-./" para "!#$% Ahet &lhl +,-./" con offset 45', () => {
+      assert.equal(cipher.decode(45,"!#$% Ahet &lhl +,-./"),"!#$% Hola &sos +,-./");
+    });
+
+
   });
 
 });
