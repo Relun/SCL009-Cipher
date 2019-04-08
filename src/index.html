@@ -10,30 +10,34 @@
 </head>
 <body>
     <header class="header">
-        <!--<div class="logo">
-            <img src="img/stoppurple.jpg"  alt="logo">
-        </div>-->   
+        <div class="logo">
+            <img src="img/prueba.png"  alt="logo">
+        </div>  
     </header>
 
-    <section>
-     <div class="center-block">
-        <!-- Button trigger modal -->
+<nav>
+  <div class="center-block">
+    <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Instrucciones
-      </button>
-      
+    Instrucciones
+  </button>
+</nav>
+
+    <section>
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Instrucciones</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>-->
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <p>Escribe un texto que quieras ocultar o mostrar</p>
+              <p>No puedes usar Ñ, ñ, ni vocales acentuadas</p>
+              <p>Elige un número SOS mayor a 0 y dáselo a quién le envíes el mensaje</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -45,26 +49,36 @@
     </div>
    </section>
 
-    <section>
+    <section class="container">
     
-    <div id="box">
-        <input type="text" id="message" placeholder="Ingresa texto a cifrar">
+    <div class="box" style = "float: left">
+        <textarea id="message" cols="50" rows="5" placeholder="Ingresa texto a ocultar o mostrar" ></textarea>
+        
+      </div>
+    
+      <div class="box" style = "float: left">
+        <input type="number" min="1" id="sos"  style="width:180px;height:15px" placeholder="Elige número SOS">
         <br> <br>
-        <input type="number" min="1" id="sos" placeholder="Ingresa nro sos">
-        <br> <br>
-        <button id="encrypt">Cifrar</button>
-        <button id="decrypt">Descifrar</button>
+        <button id="encrypt">Ocultar</button> 
         <br><br>
-        <input type="text" id="solution" placeholder="Tu texto cifrado">
-        <br><br>
+        <button id="decrypt">Mostrar</button>
+      </div>
+
+      <div class="box">
+        <textarea id="solution" cols="50" rows="5" placeholder="Aquí tu texto oculto o mostrado" ></textarea>
+      </div>
+
+    </section>
+
+    <section class="container2" >
+      <div class="box1">
         <button id="copytext">Copiar Texto</button>
-        <br><br>
         <button onclick="location.href = 'index.html'" id="enviarprimera">LIMPIAR</button>
-    </div>
+      </div>
     </section>
 
     <footer>
-      <p>&copy; 2019 SaveHer|Desarrollado por Claudia Araya</p>
+      <p>&copy; 2019 SaveHer | Desarrollado por Claudia Araya</p>
     </footer>
 
      
