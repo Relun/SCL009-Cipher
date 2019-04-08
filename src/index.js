@@ -15,3 +15,11 @@ let offset = document.getElementById("sos").value;
     
 document.getElementById("solution").value = window.cipher.decode(offset, texto);
 });
+
+document.getElementById("copytext").addEventListener("click", ()=>{
+
+    document.getElementById("solution").select();
+    document.execCommand("copy");
+
+});
+

@@ -1,1 +1,39 @@
-/* Acá va tu código */
+* {
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
+body{
+    margin: auto;
+}
+#message{
+    font-size: 30px;
+    width: 25%;
+    padding: 20px;
+    height: 80px;
+}
+
+#sos{
+    font-size: 15px;
+    width: 10%;
+    padding: 20px;
+    height: 15px;
+}
+
+#solution{
+    font-size: 30px;
+    width: 25%;
+    padding: 20px;
+    height: 80px;
+}
+
+footer{
+    background-color: #46033e;
+    position: fixed;
+    padding: 0px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+  
+  }
