@@ -11,17 +11,17 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="img/prueba.png"  alt="logo">
+            <img src="img/logoher.jpg"  alt="logo">
         </div>  
+        <nav> 
+            <div class="center-block">
+              <!-- Button trigger modal -->
+          <button type="button" class="btn-sample" data-toggle="modal" style="width:400px;height:60px;font:size 50;" data-target="#exampleModal">
+              ¿Cómo usar SaveHer?
+            </button>
+            </div>
+          </nav>
     </header>
-
-<nav>
-  <div class="center-block">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Instrucciones
-  </button>
-</nav>
 
     <section>
       <!-- Modal -->
@@ -29,52 +29,73 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Instrucciones</h5>
-              <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>-->
+              <h3 class="modal-title" id="exampleModalLabel">Instrucciones</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                
               </button>
             </div>
             <div class="modal-body">
-              <p>Escribe un texto que quieras ocultar o mostrar</p>
-              <p>No puedes usar Ñ, ñ, ni vocales acentuadas</p>
-              <p>Elige un número SOS mayor a 0 y dáselo a quién le envíes el mensaje</p>
+              <h3><b>Para Cifrar un mensaje</b></h3>
+              <p>En el cuadro de la izquierda escribe el mensaje que quieras cifrar, no puedes usar ñ, ni vocales acentuadas</p>
+              <p>En el recuadro de al medio elige un número S.O.S.</p>
+              <p>Presiona el botón "Cifrar Mensaje"</p>
+              <p>En el cuadro de la derecha obtendrás tu mensaje cifrado</p>
+              <p>Presiona el botón "Copiar Mensaje Cifrado" y compártelo, junto al número S.O.S.</p>
+              <h3><b>Para Descifrar un mensaje</b></h3>
+              <p>Escribe el mensaje que quieras descifrar</p>
+              <p>Ingresa el número S.O.S. que te entregaron junto con tu mensaje</p>
+              <p>Presiona el botón "Descifrar Mensaje"</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
               
             </div>
           </div>
         </div>
       </div>
-    </div>
+
    </section>
 
-    <section class="container">
-    
-    <div class="box" style = "float: left">
-        <textarea id="message" cols="50" rows="5" placeholder="Ingresa texto a ocultar o mostrar" ></textarea>
-        
+    <section>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <textarea id="message" cols="50" rows="7" placeholder="Escribe aquí tu mensaje a cifrar o descifrar" ></textarea>
       </div>
-    
-      <div class="box" style = "float: left">
-        <input type="number" min="1" id="sos"  style="width:180px;height:15px" placeholder="Elige número SOS">
+
+    <div class="col-md-4">
+     <div class="text-center">
+        <input type="number" min="1" id="sos" style="width:210px;height:15px" size="10" placeholder="Ingresa número S.O.S.">
+       
         <br> <br>
-        <button id="encrypt">Ocultar</button> 
+        <button class="btn-click"  id="encrypt">Cifrar Mensaje</button> 
         <br><br>
-        <button id="decrypt">Mostrar</button>
+        <button class="btn-click"  id="decrypt">Descifrar Mensaje</button>
       </div>
+    </div>
 
-      <div class="box">
-        <textarea id="solution" cols="50" rows="5" placeholder="Aquí tu texto oculto o mostrado" ></textarea>
-      </div>
-
+    <div class="col-ms-4">
+        <textarea id="solution" cols="50" rows="7" placeholder="Aquí obtendrás tu mensaje cifrado o descifrado" ></textarea>
+    </div>
+    </div>
+    </div>
     </section>
 
-    <section class="container2" >
-      <div class="box1">
-        <button id="copytext">Copiar Texto</button>
-        <button onclick="location.href = 'index.html'" id="enviarprimera">LIMPIAR</button>
-      </div>
+    <section>
+      <div class="container justify-content-center">
+       <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-4 col-md-offset-4"></div>
+         <button class="btn-click"  id="copytext">Copiar Mensaje Cifrado</button>
+     </div> 
+    </div>
+
+    <div class="row"> 
+      <div class="col-md-1">
+      <button onclick="location.href = 'index.html'" class="btn-final"  id="enviarprimera">Limpiar</button>
+    </div>
+  </div>
+  
     </section>
 
     <footer>
